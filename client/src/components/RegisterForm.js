@@ -40,9 +40,12 @@ function RegisterForm() {
         referCode: ''
       });
     } catch (error) {
-      console.error('Registration failed:', error.response ? error.response.data : error);  // More error logging
-      alert('Registration failed');
+      console.error("Registration failed:", error.response?.data || error.message);
+      alert(error.response?.data?.message || 'Registration failed');
     }
+    
+    
+    
   };
   
   return (
